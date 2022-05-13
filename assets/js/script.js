@@ -46,3 +46,54 @@ function initAccordion(){
     }
 }
 initAccordion();
+
+function initScroolSuave(){
+    const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]');
+
+    if(linksInternos.length){
+        function scrollToSection(event){
+            event.preventDefault();
+            const href = event.currentTarget.getAttribute('href');
+            const section = document.querySelector(href);
+            section.scrollIntoView({
+                behavior:'smooth',
+                block: 'start',
+            }); //não é todo browser que suporta essa função de scroll suave
+
+            //forma alternativa de fazer o scroll suave
+            // const topo = section.offsetTop;
+            // window.scrollTo({
+            //     top: topo,
+            //     behavior: 'smooth',
+            // });
+        };
+
+        linksInternos.forEach(((link) =>{
+            link.addEventListener('click', scrollToSection);
+        }));   
+    }               
+}
+initScroolSuave();
+
+function initAnimationScroll(){
+    const sections = document.querySelectorAll('.js-scroll');
+    const windowMetade = window.innerHeight * 0.6;
+    const ativo = 'ativo';
+
+    if(sections.length){
+        function animaScroll(){
+            sections.forEach((section) => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const sectionVisible = sectionTop - windowMetade < 0;
+                if(sectionVisible){
+                    section.classList.add(ativo);
+                }else{
+                    section.classList.remove(ativo);
+                }
+            })
+        }
+        animaScroll();
+        window.addEventListener('scroll', animaScroll);
+    }
+}
+initAnimationScroll();
