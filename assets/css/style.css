@@ -98,6 +98,10 @@ body {
   grid-column: 2;
 }
 
+.animais-lista li{
+  cursor: pointer;
+}
+
 .animais-lista::-webkit-scrollbar {
   width: 18px;
 }
@@ -206,5 +210,26 @@ body {
   }
   .copy {
     margin-bottom: 0px;
+  }
+}
+
+.js .js-tabContent section{ /*o .js antes é para só executar se o js estiver habilitado no browser*/
+  display: none; /*conteúdo some da tela*/
+}
+
+.js-tabContent section.ativo{
+  display: block !important; /*mostrar na tela quando tem a classe ativo*/
+  animation: show .5s forwards/*serve para ficar no estado final, não voltar pro from*/;
+}
+
+/*adicionando animação na troca de conteúdo:*/
+@keyframes show{
+  from{
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
