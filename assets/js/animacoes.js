@@ -1,8 +1,8 @@
 //é bom isolar o escopo para que se possa reutilizar as variáveis durante o código
 function initTabNav(){
     //navegação por tab:
-    const tabMenu = document.querySelectorAll('.js-tabMenu li');
-    const tabContent = document.querySelectorAll('.js-tabContent section');
+    const tabMenu = document.querySelectorAll('[data-tab="menu"] li');
+    const tabContent = document.querySelectorAll('[data-tab="content"] section');
     const ativo = 'ativo';
 
     //fazer verificação se os itens acima existem na página: (se o length for 0 significa false)
@@ -13,7 +13,8 @@ function initTabNav(){
             tabContent.forEach((section) => {
                 section.classList.remove(ativo);
             })
-            tabContent[index].classList.add(ativo);
+            const direcao = tabContent[index].dataset.anime;
+            tabContent[index].classList.add(ativo, direcao);
         };
         //a função acima faz todas as sections retirarem a classe ativo primeiro e depois adiciona a classe ativo na section selecionada
 
@@ -29,7 +30,7 @@ initTabNav(); //vai iniciar a função acima
 
 function initAccordion(){
     //accordion list
-    const accordionList = document.querySelectorAll('.js-accordion dt');
+    const accordionList = document.querySelectorAll('[data-anime="accordion"] dt');
     const ativo = 'ativo';
     if(accordionList.length){
         accordionList[0].classList.toggle(ativo);
@@ -48,7 +49,7 @@ function initAccordion(){
 initAccordion();
 
 function initScroolSuave(){
-    const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]');
+    const linksInternos = document.querySelectorAll('[data-menu="suave"] a[href^="#"]');
 
     if(linksInternos.length){
         function scrollToSection(event){
@@ -76,7 +77,7 @@ function initScroolSuave(){
 initScroolSuave();
 
 function initAnimationScroll(){
-    const sections = document.querySelectorAll('.js-scroll');
+    const sections = document.querySelectorAll('[data-anime="scroll"]');
     const windowMetade = window.innerHeight * 0.6;
     const ativo = 'ativo';
 
