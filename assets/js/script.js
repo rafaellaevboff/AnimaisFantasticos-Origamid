@@ -5,12 +5,14 @@ import initTabNav from "./modules/tabnav.js"
 //import {teste1 as testando1, teste2} from "./modules/teste" //importando algumas funções do arquivo teste
 //import * as teste from './modules/teste.js'
 import initModal from './modules/modal.js'
+import initTooltip from './modules/tooltip.js'
 
 initScroolSuave();
 initAnimationScroll();
 initAccordion();
 initTabNav();
 initModal();
+initTooltip();
 
 // testando1();
 // teste2();
