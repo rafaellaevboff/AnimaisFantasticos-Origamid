@@ -3,20 +3,22 @@ import initAnimationScroll from "./modules/scroll-animacao.js"
 import initAccordion from "./modules/accordion.js"
 import initTabNav from "./modules/tabnav.js"
 //import {teste1 as testando1, teste2} from "./modules/teste" //importando algumas funções do arquivo teste
-import * as teste from './modules/teste.js'
+//import * as teste from './modules/teste.js'
+import initModal from './modules/modal.js'
 
 initScroolSuave();
 initAnimationScroll();
 initAccordion();
 initTabNav();
+initModal();
 
 // testando1();
 // teste2();
-console.log(teste);
-console.log(teste.teste1());
-console.log(teste.senha);
+// console.log(teste);
+// console.log(teste.teste1());
+// console.log(teste.num);
 
-console.log(teste.esseNome); //se não colocar o arquivo antes n vai chamar
+// console.log(teste.esseNome); //se não colocar o arquivo antes n vai chamar
 
 //o this no module retorna undefined, já dora de modules retorna Window
 //modules é assíncrono, não espera uma função carregar pra depois carregar a outra
