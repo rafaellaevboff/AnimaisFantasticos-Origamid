@@ -2,12 +2,11 @@ import initScroolSuave from "./modules/scroll-suave.js";
 import initAnimationScroll from "./modules/scroll-animacao.js"
 import initAccordion from "./modules/accordion.js"
 import initTabNav from "./modules/tabnav.js"
-//import {teste1 as testando1, teste2} from "./modules/teste" //importando algumas funções do arquivo teste
-//import * as teste from './modules/teste.js'
 import initModal from './modules/modal.js'
 import initTooltip from './modules/tooltip.js'
 import initDropDownMenu from './modules/dropdown-menu.js'
 import initMenuMobile from './modules/menu-mobile.js'
+import initAnimaNumeros from './modules/anima-numeros.js'
 
 initTabNav();
 initScroolSuave();
@@ -17,7 +16,11 @@ initModal();
 initTooltip();
 initDropDownMenu();
 initMenuMobile();
+initAnimaNumeros();
 
+
+//import {teste1 as testando1, teste2} from "./modules/teste" //importando algumas funções do arquivo teste
+//import * as teste from './modules/teste.js'
 // testando1();
 // teste2();
 // console.log(teste);

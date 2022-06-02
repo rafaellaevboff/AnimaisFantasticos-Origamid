@@ -10,7 +10,7 @@ export default function initAnimationScroll(){
                 const sectionVisible = sectionTop - windowMetade < 0;
                 if(sectionVisible){
                     section.classList.add(ativo);
-                }else{
+                }else if(section.classList.contains(ativo)){
                     section.classList.remove(ativo);
                 }
             })
