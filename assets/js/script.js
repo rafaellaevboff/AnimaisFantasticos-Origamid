@@ -7,6 +7,7 @@ import initTooltip from './modules/tooltip.js'
 import initDropDownMenu from './modules/dropdown-menu.js'
 import initMenuMobile from './modules/menu-mobile.js'
 import initAnimaNumeros from './modules/anima-numeros.js'
+import initFuncionamento from './modules/funcionamento.js'
 
 initTabNav();
 initScroolSuave();
@@ -17,6 +18,7 @@ initTooltip();
 initDropDownMenu();
 initMenuMobile();
 initAnimaNumeros();
+initFuncionamento();
 
 
 //import {teste1 as testando1, teste2} from "./modules/teste" //importando algumas funções do arquivo teste
