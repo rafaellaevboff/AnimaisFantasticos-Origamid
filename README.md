@@ -8,11 +8,20 @@ Projeto em desenvolvimento do curso da plataforma [Origamid](https://www.origami
 - Interação com API
 
 # Projetos desenvolvidos ao decorrer do curso:
-### [Contador](https://rafaellaevboff.github.io/contadorJS/)
+### [Criar botão](https://rafaellaevboff.github.io/JS-Origamid/button-creator/)
+[Repositório no GitHub](https://github.com/rafaellaevboff/JS-Origamid/tree/main/button-creator) 
 
-### Checar CPF
+### [Contador](https://rafaellaevboff.github.io/JS-Origamid/contadorJS/)
+[Repositório no GitHub](https://github.com/rafaellaevboff/JS-Origamid/tree/main/contadorJS)
 
-### Saber valor atual do Bitcoin
+### [Saber valor atual do Bitcoin](https://rafaellaevboff.github.io/JS-Origamid/InteragindoComAPIs/bitcoinAPI/)
+[Repositório no GitHub](https://github.com/rafaellaevboff/JS-Origamid/tree/main/InteragindoComAPIs/bitcoinAPI)
 
-### Página Animais Fantásticos
+### [Mostrar piadas Chuck Norris](https://rafaellaevboff.github.io/JS-Origamid/InteragindoComAPIs/piadasAPI/)
+[Repositório no GitHub](https://github.com/rafaellaevboff/JS-Origamid/tree/main/InteragindoComAPIs/piadasAPI)
 
+### [CEP](https://rafaellaevboff.github.io/JS-Origamid/InteragindoComAPIs/cepAPI/)
+[Repositório no GitHub](https://github.com/rafaellaevboff/JS-Origamid/tree/main/InteragindoComAPIs/cepAPI)
+
+### [Página Animais Fantásticos](https://origamidanimaisfantasticos.netlify.app/)
+[Repositório no GitHub](https://github.com/rafaellaevboff/AnimaisFantasticos-Origamid)
