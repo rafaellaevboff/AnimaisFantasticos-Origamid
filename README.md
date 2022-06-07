@@ -7,9 +7,12 @@ Projeto em desenvolvimento do curso da plataforma [Origamid](https://www.origami
 - JavaScript Assíncrono
 - Interação com API
 
-# Projetos desenvolvidos no curso:
-- Checar CPF
+# Projetos desenvolvidos ao decorrer do curso:
+### [Contador](https://rafaellaevboff.github.io/contadorJS/)
 
-- Saber valor atual do Bitcoin
+### Checar CPF
 
-- Página Animais Fantásticos
+### Saber valor atual do Bitcoin
+
+### Página Animais Fantásticos
+
