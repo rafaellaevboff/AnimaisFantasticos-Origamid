@@ -3,16 +3,20 @@ import initAnimaNumeros from './anima-numeros.js'
 export default function initFetchAnimais(){
     //async-await é aceito em browsers mais novos, talvez alguns browsers não tenham suporte, para browsers antigos pode se usar o fetch-then
     async function fetchAnimais(url){
-        const animaisResposta = await fetch(url);
-        const animaisJson = await animaisResposta.json();
+        try{
+            const animaisResposta = await fetch(url);
+            const animaisJson = await animaisResposta.json();
 
-        const numerosGrid = document.querySelector('.numeros-grid');
+            const numerosGrid = document.querySelector('.numeros-grid');
 
-        animaisJson.forEach(animal => {
-            const divAnimal = createAnimal(animal);
-            numerosGrid.appendChild(divAnimal);
-        });
-        initAnimaNumeros(); //só inicia depois que o fetch acontecer, daí não dá o problema de antes, de não carregar n atualizar a página
+            animaisJson.forEach(animal => {
+                const divAnimal = createAnimal(animal);
+                numerosGrid.appendChild(divAnimal);
+            });
+            initAnimaNumeros(); //só inicia depois que o fetch acontecer, daí não dá o problema de antes, de não carregar n atualizar a página
+        }catch(erro){
+            console.log(Error(erro));
+        }
     }
 
     function createAnimal(animal){
