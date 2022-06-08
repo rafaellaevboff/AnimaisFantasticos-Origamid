@@ -3,6 +3,7 @@ Projeto em desenvolvimento do curso da plataforma [Origamid](https://www.origami
 
 ## Temas abordados durante o curso:
 - Objetos
+- Classes
 - Interação com o DOM
 - JavaScript Assíncrono
 - Interação com API
