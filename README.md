@@ -1,6 +1,7 @@
 # AnimaisFantasticos-Origamid
 Projeto em desenvolvimento do curso da plataforma [Origamid](https://www.origamid.com/), ministradas pelo professor [André Rafael](https://github.com/origamid).
 
+[Repositório com outros projetos do curso](https://github.com/rafaellaevboff/JS-Origamid)
 ## Temas abordados durante o curso:
 - Objetos
 - Classes
