@@ -1,6 +1,6 @@
 import * as teste from "./teste.js"
 
-console.log(teste.senha); //posso ter acesso a outros arquivos importando eles
+//console.log(teste.senha); //posso ter acesso a outros arquivos importando eles
 
 export default function initAccordion(){
     //accordion list

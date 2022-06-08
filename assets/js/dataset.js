@@ -3,7 +3,7 @@
 
 //Dentro o objeto dataset existe uma coleção de chave / valor, com todos os atributos do elemento html que começarem com data-
 const div = document.querySelector('div');
-console.log(div.dataset);
+//console.log(div.dataset);
 
 // Os valores selecionam a mesma div acima:
 //div = document.querySelector('[data-cor]');

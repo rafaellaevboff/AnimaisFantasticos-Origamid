@@ -29,9 +29,9 @@ export default function initTooltip(){
             tooltipBox: '',
             element: '',
             handleEvent(){ //ESSE evento serve para poder enviar esse evento para uma função a qual ele não tem acesso
-            this.tooltipBox.remove(); 
-            this.element.removeEventListener('mouseleave', onMouseLeave);
-            this.element.removeEventListener('mousemove', onMouseMove);
+                this.tooltipBox.remove(); 
+                this.element.removeEventListener('mouseleave', onMouseLeave);
+                this.element.removeEventListener('mousemove', onMouseMove);
             }
         }
 
