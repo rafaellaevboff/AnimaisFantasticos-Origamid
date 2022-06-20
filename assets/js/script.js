@@ -22,26 +22,10 @@ initFuncionamento();
 initFetchAnimais();
 initFetchBitcoin();
 
-//import {teste1 as testando1, teste2} from "./modules/teste" //importando algumas funções do arquivo teste
-//import * as teste from './modules/teste.js'
-// testando1();
-// teste2();
-// console.log(teste);
-// console.log(teste.teste1());
-// console.log(teste.num);
+//importar script interno
+// import $ from 'jquery';
+// import _ from 'lodash';
 
-// console.log(teste.esseNome); //se não colocar o arquivo antes n vai chamar
-
-//o this no module retorna undefined, já dora de modules retorna Window
-//modules é assíncrono, não espera uma função carregar pra depois carregar a outra
-
-/*
-use strict
-previne algumas ações, considerando como erros, por padrão modules está no modo strict
-
-'use strict'; //p ativar strict(lembrando que se estiver no module, não precisa colocar)
-nome = 'Ford'; // erro, variável global
-delete Array.prototype; // erro, não deletável
-window.top = 200; // erro, não pode mudar
-const arguments = 3.14; // escrever em palavra reservada
-*/
+// $('nav').hide();
+// const diferenca = _.difference(['Banana', 'Uva'], ['Banana', 'Morango']);
+// console.log(diferenca);

@@ -1,10 +1,11 @@
 {
   "name": "animaisfantasticos-origamid",
   "version": "1.0.0",
-  "description": "Projeto em desenvolvimento do curso da plataforma [Origamid](https://www.origamid.com/), ministradas pelo professor [André Rafael](https://github.com/origamid).",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --mode development --watch --entry ./assets/js/script.js -o ./main.js",
+    "build": "webpack --mode production --entry ./assets/js/script.js -o ./main.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,14 @@
   },
   "homepage": "https://github.com/rafaellaevboff/AnimaisFantasticos-Origamid#readme",
   "devDependencies": {
-    "eslint": "^8.18.0"
+    "eslint": "^8.16.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21"
   }
 }
