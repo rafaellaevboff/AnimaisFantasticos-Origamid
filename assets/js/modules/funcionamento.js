@@ -12,12 +12,11 @@ export default function initFuncionamento(){
     const semanaAberto = diasSemana.indexOf(diaSemana) !== -1
     const horarioAberto = (horarioAgora >= horarioFuncionamento[0] && horarioAgora < horarioFuncionamento[1])
 
-    if(semanaAberto && horarioAberto){
+    if (semanaAberto && horarioAberto){
         funcionamento.classList.add('aberto');
     }
 
 }
-
 
 /*
 const agora = new Date();

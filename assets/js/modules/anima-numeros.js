@@ -8,9 +8,9 @@ export default function initAnimaNumeros(){
             const incremento = Math.floor(total / 100);
             let start = 0;
             const timer = setInterval(() =>{
-                start = start + incremento;
+                start += incremento;
                 numero.innerText = start;
-                if(start > total){
+                if (start > total){
                     numero.innerText = total; //pra dar o número exato, por que com arredondamento do incremento o número muda
                     clearInterval(timer);
                 }
@@ -18,14 +18,15 @@ export default function initAnimaNumeros(){
         })
     }
 
+    const observador = new MutationObserver(handleMutation);
+
     function handleMutation(mutation){
-        if(mutation[0].target.classList.contains('ativo')){
+        if (mutation[0].target.classList.contains('ativo')){
             observador.disconnect();
             animaNumeros();
         }
     }
-    const observerTarget = document.querySelector('.numeros')
-    const observador = new MutationObserver(handleMutation);
-    observador.observe(observerTarget, {attributes: true})
-}
 
+    const observerTarget = document.querySelector('.numeros');
+    observador.observe(observerTarget, { attributes: true });
+}

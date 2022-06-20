@@ -5,18 +5,18 @@ export default function initTabNav(){
     const tabContent = document.querySelectorAll('[data-tab="content"] section');
     const ativo = 'ativo';
 
-    //fazer verificação se os itens acima existem na página: (se o length for 0 significa false)
-    if(tabMenu.length && tabContent.length){
-        tabContent[0].classList.add(ativo); //ao abrir a página aparecer conteúdo
+    function activeTab(index){
+        tabContent.forEach((section) => {
+            section.classList.remove(ativo);
+        })
+        const direcao = tabContent[index].dataset.anime;
+        tabContent[index].classList.add(ativo, direcao);
+    };
+    //a função acima faz todas as sections retirarem a classe ativo primeiro e depois adiciona a classe ativo na section selecionada
 
-        function activeTab(index){
-            tabContent.forEach((section) => {
-                section.classList.remove(ativo);
-            })
-            const direcao = tabContent[index].dataset.anime;
-            tabContent[index].classList.add(ativo, direcao);
-        };
-        //a função acima faz todas as sections retirarem a classe ativo primeiro e depois adiciona a classe ativo na section selecionada
+    //fazer verificação se os itens acima existem na página: (se o length for 0 significa false)
+    if (tabMenu.length && tabContent.length){
+        tabContent[0].classList.add(ativo); //ao abrir a página aparecer conteúdo
 
         tabMenu.forEach((itemMenu, index) => {
             itemMenu.addEventListener('click',() => {

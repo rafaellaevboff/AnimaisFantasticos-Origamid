@@ -1,0 +1,22 @@
+{
+  "name": "animaisfantasticos-origamid",
+  "version": "1.0.0",
+  "description": "Projeto em desenvolvimento do curso da plataforma [Origamid](https://www.origamid.com/), ministradas pelo professor [André Rafael](https://github.com/origamid).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaellaevboff/AnimaisFantasticos-Origamid.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaellaevboff/AnimaisFantasticos-Origamid/issues"
+  },
+  "homepage": "https://github.com/rafaellaevboff/AnimaisFantasticos-Origamid#readme",
+  "devDependencies": {
+    "eslint": "^8.18.0"
+  }
+}
