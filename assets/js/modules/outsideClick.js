@@ -1,22 +1,23 @@
-export default function outsideClick(element, events, callback){
+export default function outsideClick(element, events, callback) {
     const html = document.documentElement;
     const outside = 'data-outside';
 
-    function handleOutsideClick(event){
-        if (!element.contains(event.target)){
+    function handleOutsideClick(event) {
+        if (!element.contains(event.target)) {
             element.removeAttribute(outside, '');
-            events.forEach((userEvent)=>{
+            events.forEach((userEvent) => {
                 html.removeEventListener(userEvent, handleOutsideClick);
             });
-            callback();//vai remover
+            callback(); // vai remover
         }
     }
 
-    if (!element.hasAttribute(outside)){
-        events.forEach((userEvent)=>{
-            setTimeout(()=> html.addEventListener(userEvent, handleOutsideClick));//espera carregar o bubble e depois ativa aqui
-        })
-        
+    if (!element.hasAttribute(outside)) {
+        events.forEach((userEvent) => {
+            setTimeout(() => html.addEventListener(userEvent, handleOutsideClick));
+            // espera carregar o bubble e depois ativa aqui
+        });
+
         element.setAttribute(outside, '');
     }
 }

@@ -1,8 +1,8 @@
-export default function initTooltip(){
-    const tooltips = document.querySelectorAll('[data-tooltip]')
+export default function initTooltip() {
+    const tooltips = document.querySelectorAll('[data-tooltip]');
 
     const onMouseMove = {
-        handleEvent(event){
+        handleEvent(event) {
             this.tooltipBox.style.top = `${event.pageY + 20}px`;
             this.tooltipBox.style.left = `${event.pageX + 20}px`;
         },
@@ -11,25 +11,26 @@ export default function initTooltip(){
     const onMouseLeave = {
         tooltipBox: '',
         element: '',
-        handleEvent(){ //ESSE evento serve para poder enviar esse evento para uma função a qual ele não tem acesso
-            this.tooltipBox.remove(); 
+        handleEvent() {
+            // ESSE evento serve para poder enviar esse evento para 1 função q ele n tem acesso
+            this.tooltipBox.remove();
             this.element.removeEventListener('mouseleave', onMouseLeave);
             this.element.removeEventListener('mousemove', onMouseMove);
         },
     };
 
-    function criarTooltipBox(element){
+    function criarTooltipBox(element) {
         const tooltipBox = document.createElement('div');
         const text = element.getAttribute('aria-label');
         tooltipBox.classList.add('tooltip');
         tooltipBox.innerText = text;
-        document.body.appendChild(tooltipBox)
+        document.body.appendChild(tooltipBox);
         return tooltipBox;
     }
 
-    function onMouseOver(){
+    function onMouseOver() {
         const tooltipBox = criarTooltipBox(this);
-        
+
         onMouseMove.tooltipBox = tooltipBox;
         onMouseLeave.tooltipBox = tooltipBox;
         onMouseLeave.element = this;
@@ -37,8 +38,8 @@ export default function initTooltip(){
         this.addEventListener('mousemove', onMouseMove);
     }
 
-    if(tooltips){
-        tooltips.forEach((item)=>{
+    if (tooltips) {
+        tooltips.forEach((item) => {
             item.addEventListener('mouseover', onMouseOver);
         });
     }

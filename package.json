@@ -16,7 +16,6 @@
   "bugs": {
     "url": "https://github.com/rafaellaevboff/AnimaisFantasticos-Origamid/issues"
   },
-  "homepage": "https://github.com/rafaellaevboff/AnimaisFantasticos-Origamid#readme",
   "devDependencies": {
     "@babel/core": "^7.18.2",
     "@babel/plugin-transform-runtime": "^7.18.2",

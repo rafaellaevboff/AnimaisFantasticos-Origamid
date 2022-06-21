@@ -1,16 +1,16 @@
-export default function initScroolSuave(){
+export default function initScroolSuave() {
     const linksInternos = document.querySelectorAll('[data-menu="suave"] a[href^="#"]');
 
-    function scrollToSection(event){
+    function scrollToSection(event) {
         event.preventDefault();
         const href = event.currentTarget.getAttribute('href');
         const section = document.querySelector(href);
         section.scrollIntoView({
-            behavior:'smooth',
+            behavior: 'smooth',
             block: 'start',
-        }); //não é todo browser que suporta essa função de scroll suave
+        }); // não é todo browser que suporta essa função de scroll suave
 
-        //forma alternativa de fazer o scroll suave
+        // forma alternativa de fazer o scroll suave
         // const topo = section.offsetTop;
         // window.scrollTo({
         //     top: topo,
@@ -18,9 +18,9 @@ export default function initScroolSuave(){
         // });
     }
 
-    if (linksInternos.length){
+    if (linksInternos.length) {
         linksInternos.forEach(((link) => {
             link.addEventListener('click', scrollToSection);
-        }));   
-    }               
+        }));
+    }
 }
