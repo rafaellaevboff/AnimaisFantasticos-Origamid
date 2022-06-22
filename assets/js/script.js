@@ -7,7 +7,7 @@ import Tooltip from './modules/tooltip.js';
 import initDropDownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initFuncionamento from './modules/funcionamento.js';
-import initFetchAnimais from './modules/fetch-animais.js';
+import fetchAnimais from './modules/fetch-animais.js';
 import initFetchBitcoin from './modules/fetch-bitcoin.js';
 
 // const options = {
@@ -35,12 +35,6 @@ initAnimationScroll();
 initDropDownMenu();
 initMenuMobile();
 initFuncionamento();
-initFetchAnimais();
 initFetchBitcoin();
 
-// importar script interno
-// import $ from 'jquery';
-// import _ from 'lodash';
-// $('nav').hide();
-// const diferenca = _.difference(['Banana', 'Uva'], ['Banana', 'Morango']);
-// console.log(diferenca);
+fetchAnimais('../../animaisapi.json', '.numeros-grid');
