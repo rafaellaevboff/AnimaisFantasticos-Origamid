@@ -1,4 +1,4 @@
-import initAnimaNumeros from './anima-numeros.js';
+import AnimaNumeros from './anima-numeros.js';
 
 export default function initFetchAnimais() {
     // async-await é aceito em browsers mais novos
@@ -25,7 +25,8 @@ export default function initFetchAnimais() {
                 numerosGrid.appendChild(divAnimal);
             });
 
-            initAnimaNumeros();
+            const animaNumeros = new AnimaNumeros('[data-numero', '.numeros', 'ativo');
+            animaNumeros.init();
             // só inicia dps q o fetch acontecer
             // daí n dá o problema de antes, de n carregar/atualizar a pag
         } catch (erro) {
