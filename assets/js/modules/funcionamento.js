@@ -1,39 +1,40 @@
-export default function initFuncionamento() {
-    const funcionamento = document.querySelector('[data-semana');
-    const diasSemana = funcionamento.dataset.semana.split(',').map(Number);
-    const horarioFuncionamento = funcionamento.dataset.horario.split(',').map(Number);
-    // console.log(diasSemana);
+export default class Funcionamento {
+    constructor(funcionamento, activeClass) {
+        this.funcionamento = document.querySelector(funcionamento);
+        this.activeClass = activeClass;
+    }
 
-    const dataAgora = new Date();
-    const diaSemana = dataAgora.getDay();
-    const horarioAgora = dataAgora.getHours();
+    dadosFuncionamento() {
+        this.diasSemana = this.funcionamento.dataset.semana.split(',').map(Number);
+        this.horarioFuncionamento = this.funcionamento.dataset.horario.split(',').map(Number);
+    }
 
-    // const teste = [1,2,3,4,5].indexOf(5);
-    const semanaAberto = diasSemana.indexOf(diaSemana) !== -1;
-    // eslint-disable-next-line max-len
-    const horarioAberto = (horarioAgora >= horarioFuncionamento[0] && horarioAgora < horarioFuncionamento[1]);
+    dadosAgora() {
+        this.dataAgora = new Date();
+        this.diaSemana = this.dataAgora.getDay();
+        this.horarioAgora = this.dataAgora.getUTCHours() - 3;
+        // o utc -3 faz usar o horário de Brasília
+    }
 
-    if (semanaAberto && horarioAberto) {
-        funcionamento.classList.add('aberto');
+    estaAberto() {
+        this.semanaAberto = this.diasSemana.indexOf(this.diaSemana) !== -1;
+        this.horarioAberto = (this.horarioAgora >= this.horarioFuncionamento[0]
+            && this.horarioAgora < this.horarioFuncionamento[1]);
+        return this.semanaAberto && this.horarioAberto;
+    }
+
+    ativaAberto() {
+        if (this.estaAberto()) {
+            this.funcionamento.classList.add(this.activeClass);
+        }
+    }
+
+    init() {
+        if (this.funcionamento) {
+            this.dadosFuncionamento();
+            this.dadosAgora();
+            this.ativaAberto();
+        }
+        return this;
     }
 }
-
-/*
-const agora = new Date();
-console.log(agora.getDay());
-console.log(agora.getDate());
-console.log(agora.getMonth()+1);
-
-const futuro = new Date('Dec 25 2022 00:00:01');
-console.log(futuro);
-
-function tranformarDias(tempo){
-    return tempo / (24 * 60 * 60 * 1000); //se quero dia/hora, é só apagar os anteriores
-}
-
-const diasAgora = tranformarDias(agora.getTime());
-const diasFuturo = tranformarDias(futuro.getTime());
-
-//getTime() millissegundos de 1970 até agora
-console.log(diasFuturo - diasAgora); //quantos dias para chegar o Natal
-*/
