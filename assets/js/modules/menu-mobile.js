@@ -14,7 +14,8 @@ export default class MenuMobile {
         // this.init(); // poderia iniciar aqui direto sem precisar iniciar no script tbm
     }
 
-    openMenu() {
+    openMenu(event) {
+        event.preventDefault();
         this.menuList.classList.add(this.activeClass);
         this.menuButton.classList.add(this.activeClass);
 
