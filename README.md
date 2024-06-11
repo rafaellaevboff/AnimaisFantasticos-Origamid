@@ -1,5 +1,6 @@
 # JS-Origamid
-Projeto em desenvolvimento do curso da plataforma [Origamid](https://www.origamid.com/), ministradas pelo professor [André Rafael](https://github.com/origamid).
+Projeto em desenvolvimento do curso da plataforma [Origamid](https://www.origamid.com/), ministradas pelo professor [André Rafael](https://github.com/origamid). <br/>
+Certificado de conclusão do curso: https://www.origamid.com/certificate/842515f5 
 
 ## Temas abordados durante o curso:
 - Objetos
